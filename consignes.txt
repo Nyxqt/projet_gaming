@@ -1,0 +1,5 @@
+Visitor => $Session[command]
+Cart => inscription => login
+OR : pas inscrit => inscription => login
+
+LOGGED => link $session[command]
