@@ -13,3 +13,23 @@ body {
     color: rgb(255, 247, 1);
     margin-bottom: -15px;
 }
+
+.title_bot {
+    color: white;
+}
+
+.hover_yellow {
+    color: white;
+}
+
+.hover_yellow:hover {
+    color: rgb(255, 247, 1);
+}
+
+.title_ff {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.text_ff {
+    font-family: 'Quicksand', sans-serif;
+}
