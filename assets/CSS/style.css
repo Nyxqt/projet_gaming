@@ -1,4 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .brand_title {
     font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+.title_top {
+    color: rgb(255, 247, 1);
+    margin-bottom: -15px;
 }

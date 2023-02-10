@@ -1,2 +1,2 @@
 <?php
-require('../PROJET_ECOMMERCE/templates/homepage.php');
+require('../templates/homepage.php');
