@@ -33,3 +33,33 @@ body {
 .text_ff {
     font-family: 'Quicksand', sans-serif;
 }
+
+.current_page {
+    color: rgb(255, 247, 1);
+    text-decoration: underline;
+}
+
+.main_highlight {
+    height: 630px;
+}
+
+.main_highlight picture img{
+    position: absolute;
+    width: 100%;
+}
+
+.main_highlight picture p {
+    position: relative;
+    margin-top: 5em;
+    width: 15em;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+}
+
+.yellow {
+    color: rgb(255, 247, 1);
+}
+
+.price::before {
+    content: '€';
+}
