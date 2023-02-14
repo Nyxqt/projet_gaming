@@ -1,3 +1,3 @@
 <?php
-require('../controllers/crudAdmin.php');
-createAdmin();
+require('../controllers/addAdmin.php');
+createAdmin($msg);

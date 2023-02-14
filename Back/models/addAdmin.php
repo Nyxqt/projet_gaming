@@ -1,5 +1,5 @@
 <?php
-$msg='toto';
+$msg='';
 if(isset($_POST['submit'])){
 
     if (!isset($_POST['nickname']) || empty($_POST['nickname'])
