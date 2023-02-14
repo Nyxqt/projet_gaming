@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg p-0">
+        <nav class="navbar navbar-expand-lg p-0 sticky-top">
             <div class="container-fluid d-flex justify-content-between p-0" data-bs-theme="dark">
                 <a class="navbar-brand brand_title d-flex flex-column text-center ms-2" href="#">
                     <span class="title_top">Nyx</span> 
@@ -20,7 +20,7 @@
                     <a class="nav-link title_ff hover_yellow fs-2 current_page" href="#">Stratégie</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link title_ff hover_yellow fs-2" href="#">TG Matsu</a>
+                    <a class="nav-link title_ff hover_yellow fs-2" href="#">Multijoueur</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link title_ff hover_yellow fs-2" href="#">Action</a>
