@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.brand_title {
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+.title_top {
+    color: rgb(255, 247, 1);
+    margin-bottom: -15px;
+}
+
+.title_bot {
+    color: white;
+}
+
+.hover_yellow {
+    color: white;
+}
+
+.hover_yellow:hover {
+    color: rgb(255, 247, 1);
+}
+
+.title_ff {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.text_ff {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.current_page {
+    color: rgb(255, 247, 1);
+    text-decoration: underline;
+}
+
+.main_highlight {
+    height: 630px;
+}
+
+.main_highlight picture img{
+    position: absolute;
+    width: 100%;
+}
+
+.main_highlight picture p {
+    position: relative;
+    margin-top: 5em;
+    width: 15em;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+}
+
+.yellow {
+    color: rgb(255, 247, 1);
+}
+
+.price::before {
+    content: '€';
+}
