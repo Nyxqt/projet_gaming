@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyx Gaming</title>
-    <?php require('../assets/vendors/externals.php') ?>
+    <?php require('../assets/lib/externals.php') ?>
 </head>
 <body>
     <header>
@@ -59,6 +59,6 @@
             </div>
         </div>
     </main>
-<?php require('../assets/vendors/externalsJS.php') ?>
+<?php require('../assets/lib/externalsJS.php') ?>
 </body>
 </html>
