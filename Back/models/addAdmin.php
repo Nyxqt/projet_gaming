@@ -15,8 +15,8 @@ if(isset($_POST['submit'])){
         $email= $_POST['email'];
         $password = password_hash($_POST['pw'], PASSWORD_DEFAULT);
         
-        $query = dbConnect()->prepare("INSERT INTO admin (nickname, email, password) VALUES (:nickname, :email, :password)");
-        $query->bindValue(':nickname', $nickname, PDO::PARAM_STR);
+        $query = dbConnect()->prepare("INSERT INTO admin (username, email, password) VALUES (:username, :email, :password)");
+        $query->bindValue(':username', $username, PDO::PARAM_STR);
         $query->bindValue(':password', $password, PDO::PARAM_STR);
         $query->bindValue(':email', $email, PDO::PARAM_STR);
         $query->execute();

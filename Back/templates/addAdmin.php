@@ -7,7 +7,7 @@
         <div class="col"></div>
         <label for="inputNickname" class="col-lg-2 col-form-label">Pseudo</label>
         <div class="col-lg-3">
-        <input type="text" class="form-control" name="nickname">
+        <input type="text" class="form-control" name="username">
         </div>
         <div class="col"></div>
     </div>
