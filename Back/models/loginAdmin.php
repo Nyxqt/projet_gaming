@@ -12,8 +12,7 @@ if (isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password'
     if ($email == $user['email'] && password_verify($password, $user['password'])) {
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $user['username'];
-        require('../controllers/homepage.php');
-        homepageAdmin();
+        header('location: index.php');
     } else {
         $msg= "Identifiant invalide!";
     }

@@ -11,44 +11,44 @@
  <body>
  <div class="container-fluid d-flex">
 <div class="d-flex flex-column flex-shrink-0 text-white p-3" style="width: 280px; height: 100vh;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <a href="index.php?action=home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
     <i class="fa-solid fa-database fa-xl"></i>
     <span class="fs-4 ms-2">Gestion</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="#" class="nav-link hover_yellow">
         <i class="fa-solid fa-house"></i>
           Accueil
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Catégories
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Genres
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Jeux
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link  hover_yellow">
         <i class="fa-solid fa-image"></i>
           Images
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-white">
+        <a href="index.php?action=admin" class="nav-link  hover_yellow">
         <i class="fa-solid fa-user"></i>
           Administrateurs
         </a>
@@ -66,7 +66,7 @@
             Configuration
         </a>
         </li>
-        <li><a class="dropdown-item" href="#">
+        <li><a class="dropdown-item" href="index.php?action=logout">
             <i class="fa-solid fa-right-from-bracket"></i>
             Déconnexion
         </a>
