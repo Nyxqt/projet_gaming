@@ -18,13 +18,13 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link hover_yellow">
+        <a href="index.php?action=home" class="nav-link hover_yellow">
         <i class="fa-solid fa-house"></i>
           Accueil
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link  hover_yellow">
+        <a href="index.php?action=category&p=1" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Catégories
         </a>
@@ -48,7 +48,7 @@
         </a>
       </li>
       <li>
-        <a href="index.php?action=admin" class="nav-link  hover_yellow">
+        <a href="index.php?action=admin&p=1" class="nav-link  hover_yellow">
         <i class="fa-solid fa-user"></i>
           Administrateurs
         </a>

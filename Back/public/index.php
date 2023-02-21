@@ -14,6 +14,26 @@ if (isset($_SESSION['username'])) {
             require('../controllers/addAdmin.php');
             createAdmin($msg);
 
+        } elseif($_GET['action'] == 'updAdmin') {
+            if(isset($_GET['id'])) {
+                require('../controllers/updAdmin.php');
+                updAdmin();
+            }
+
+        } elseif($_GET['action'] == 'category') {
+            require('../controllers/category.php');
+            crudCategory();
+
+        } elseif($_GET['action'] == 'addCategory') {
+            require('../controllers/addCategory.php');
+            createCategory($msg);
+
+        } elseif($_GET['action'] == 'updCategory') {
+            if(isset($_GET['id'])) {
+                require('../controllers/updCategory.php');
+                updCategory();
+            }
+
         } elseif($_GET['action'] == 'logout') {
             require('../models/logoutAdmin.php');
 

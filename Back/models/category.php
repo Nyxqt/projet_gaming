@@ -1,16 +1,16 @@
 <?php
 
-function deleteAdmin() {
+function deleteCategory() {
     if(isset($_GET['id'])) {
         $adminId= $_GET['id'];
-        $reqDelete= 'DELETE FROM `admin` WHERE id = :id';
+        $reqDelete= 'DELETE FROM `category` WHERE id = :id';
         $adminDelete= dbConnect()->prepare($reqDelete);
         $adminDelete-> bindValue(':id', $adminId, PDO::PARAM_INT);
         $adminDelete-> execute();
     }
 }
 
-function getAdmins() {
+function getCategories() {
     // PAGINATION SYSTEM
     $db = dbConnect();
     $per_page = 10;
@@ -26,7 +26,7 @@ function getAdmins() {
     $nb_pagination = 3;
     $offset = ($page - 1) * $per_page;
 
-    $total_query = "SELECT COUNT(*) as total FROM admin";
+    $total_query = "SELECT COUNT(*) as total FROM category";
     $total_result = $db->query($total_query);
     $total_row = $total_result->fetch();
     $total = $total_row['total'];
@@ -40,15 +40,15 @@ function getAdmins() {
 
     // SQL REQUEST ADMIN LIST
 
-    $statement = $db->query("SELECT * FROM admin ORDER BY id LIMIT $offset, $per_page");
-    $admins = [];
+    $statement = $db->query("SELECT * FROM category ORDER BY id LIMIT $offset, $per_page");
+    $categories = [];
     while (($row = $statement->fetch())) {
-        $admin = [
+        $category = [
             'id' => $row['id'],
-            'username' => $row['username'],
-            'email' => $row['email'],
+            'name' => $row['name'],
+            'enabled' => $row['enabled'],
             ];
-        $admins[] = $admin;
+        $categories[] = $category;
     }
-    return [$admins, $next, $previous, $page, $end, $num_pages, $start];
+    return [$categories, $next, $previous, $page, $end, $num_pages, $start];
 }

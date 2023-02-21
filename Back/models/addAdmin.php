@@ -2,7 +2,7 @@
 $msg='';
 if(isset($_POST['submit'])){
 
-    if (!isset($_POST['nickname']) || empty($_POST['nickname'])
+    if (!isset($_POST['username']) || empty($_POST['username'])
     || (!isset($_POST['email']) || (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)))
     || (!isset($_POST['pw']) || empty($_POST['pw']))
     || (!isset($_POST['pwconfirm']) || empty($_POST['pwconfirm'])) ) {
@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     if (($_POST['pw']) <> ($_POST['pwconfirm'])) {
         $msg = 'Les mots de passe ne sont pas identiques';
     } else {
-        $nickname= strip_tags($_POST['nickname']);
+        $username= strip_tags($_POST['username']);
         $email= $_POST['email'];
         $password = password_hash($_POST['pw'], PASSWORD_DEFAULT);
         
