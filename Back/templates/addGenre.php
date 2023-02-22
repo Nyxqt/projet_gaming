@@ -1,4 +1,4 @@
-<?php $title = "Category"; ?>
+<?php $title = "Genre"; ?>
 <?php ob_start(); ?>
 
 <div class="container-fluid mt-5">
@@ -27,7 +27,23 @@
             </div>
         </div>
         <div class="col"></div>
-        
+    </div>
+    <div class="row mb-3">
+        <div class="col"></div>
+        <div class="col">
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelec" name="id_category" aria-label="Floating label select example">
+                    <option selected disabled>Séléctionnez une option</option>
+                    <?php
+                    foreach($genres as $genre){
+                        echo "<option value = ".$genre['id'].'>'.$genre['name'] ."</option>" ;
+                    }
+                    ?>
+                </select>
+                <label for="floatingSelec">Catégorie</label>
+            </div>
+        </div>
+        <div class="col"></div>
     </div>
     <div class="row text-center">
         <div class="col"></div>

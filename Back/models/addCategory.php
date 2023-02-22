@@ -7,7 +7,12 @@ if(isset($_POST['submit'])){
         $msg = 'Veuillez compléter tout les champs.';
     } else {
         $name= strip_tags($_POST['name']);
-        $enabled= boolval($_POST['enabled']);
+        $enabled= strval($_POST['enabled']);
+        if ($enabled == "true") {
+            $enabled = true;
+        } else {
+            $enabled = false;
+        }
         
         $query = dbConnect()->prepare("INSERT INTO category (name, enabled) VALUES (:name, :enabled)");
         $query->bindValue(':name', $name, PDO::PARAM_STR);

@@ -37,15 +37,31 @@ if (isset($_SESSION['username'])) {
         } elseif($_GET['action'] == 'logout') {
             require('../models/logoutAdmin.php');
 
+        } elseif($_GET['action'] == 'genre') {
+            require('../controllers/genre.php');
+            crudGenre();
+
+        } elseif($_GET['action'] == 'addGenre') {
+            require('../controllers/addGenre.php');
+            createGenre($msg);
+
+        } elseif($_GET['action'] == 'updGenre') {
+            if(isset($_GET['id'])) {
+                require('../controllers/updGenre.php');
+                updGenre();
+            }
+
         } else {
             require('../controllers/homepage.php');
             homepageAdmin();
 
         }
+
     } else {
         require('../controllers/homepage.php');
         homepageAdmin();
     }
+
 } else {
         require('../controllers/loginAdmin.php');
         loginAdmin($msg);

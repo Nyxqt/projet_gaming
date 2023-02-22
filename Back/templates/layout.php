@@ -30,7 +30,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link  hover_yellow">
+        <a href="index.php?action=genre&p=1" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Genres
         </a>

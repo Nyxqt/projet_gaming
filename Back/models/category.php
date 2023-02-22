@@ -2,11 +2,11 @@
 
 function deleteCategory() {
     if(isset($_GET['id'])) {
-        $adminId= $_GET['id'];
+        $categoryId= $_GET['id'];
         $reqDelete= 'DELETE FROM `category` WHERE id = :id';
-        $adminDelete= dbConnect()->prepare($reqDelete);
-        $adminDelete-> bindValue(':id', $adminId, PDO::PARAM_INT);
-        $adminDelete-> execute();
+        $categoryDelete= dbConnect()->prepare($reqDelete);
+        $categoryDelete-> bindValue(':id', $categoryId, PDO::PARAM_INT);
+        $categoryDelete-> execute();
     }
 }
 
@@ -50,5 +50,6 @@ function getCategories() {
             ];
         $categories[] = $category;
     }
+    
     return [$categories, $next, $previous, $page, $end, $num_pages, $start];
 }
