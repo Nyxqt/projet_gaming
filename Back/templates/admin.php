@@ -25,7 +25,7 @@
                     <td><?=$admin['username']?></td>
                     <td><a class="btn btn-warning" href="index.php?action=updAdmin&id=<?=$admin['id']?>" role="button">
                     <span>Modifier</span><i class="fa-solid fa-user-gear ms-2"></i></a>
-                    <a class="btn btn-danger" href="index.php?action=admin&id=<?=$admin['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
+                    <a class="btn btn-danger" href="index.php?action=delAdmin&id=<?=$admin['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
                     <span>Effacer</span><i class="fa-solid fa-user-minus ms-2"></i></a></td>
                 </tr>
             <?php } ?>
@@ -39,7 +39,7 @@
                     <a class="page-link" href="index.php?action=admin&p=<?=$previous?>" tabindex="-1" aria-disabled="true">Précédent</a>
                     </li>
                 <?php for ($i = $start; $i <= $end; $i++) { ?>
-                    <li class="page-item <?= ($page == $i) ? 'active" aria-current="page"' : '"'?>><a class="page-link" href="index.php?/=admin&p=<?php echo $i; ?>"><?=$i;?></a></li>
+                    <li class="page-item <?= ($page == $i) ? 'active" aria-current="page"' : '"'?>><a class="page-link" href="index.php?=admin&p=<?php echo $i; ?>"><?=$i;?></a></li>
                 <?php } ?>
                 <li class="page-item <?php if ($page == $num_pages) { echo 'disabled'; } ?>">
                     <a class="page-link" href="index.php?action=admin&p=<?php echo $next ?>">Suivant</a>

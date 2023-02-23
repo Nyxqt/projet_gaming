@@ -5,6 +5,8 @@ if (isset($_SESSION['username'])) {
         if ($_GET['action'] == 'home') {
             require('../controllers/homepage.php');
             homepageAdmin();
+
+        // ADMIN - ADMIN - ADMIN //
           
         } elseif($_GET['action'] == 'admin') {
             require('../controllers/admin.php');
@@ -20,6 +22,15 @@ if (isset($_SESSION['username'])) {
                 updAdmin();
             }
 
+        }  elseif($_GET['action'] == 'delAdmin') {
+            if(isset($_GET['id'])) {
+                $id = intval($_GET['id']);
+                require('../controllers/delAdmin.php');
+                delAdmin($id);
+            } 
+
+        // CATEGORY - CATEGORY - CATEGORY //
+
         } elseif($_GET['action'] == 'category') {
             require('../controllers/category.php');
             crudCategory();
@@ -34,8 +45,14 @@ if (isset($_SESSION['username'])) {
                 updCategory();
             }
 
-        } elseif($_GET['action'] == 'logout') {
-            require('../models/logoutAdmin.php');
+        } elseif($_GET['action'] == 'delCategory') {
+            if(isset($_GET['id'])) {
+                $id = intval($_GET['id']);
+                require('../controllers/delCategory.php');
+                delCategory($id);
+            } 
+
+        // GENRE - GENRE - GENRE //
 
         } elseif($_GET['action'] == 'genre') {
             require('../controllers/genre.php');
@@ -51,10 +68,42 @@ if (isset($_SESSION['username'])) {
                 updGenre();
             }
 
+        } elseif($_GET['action'] == 'delGenre') {
+            if(isset($_GET['id'])) {
+                $id = intval($_GET['id']);
+                require('../controllers/delGenre.php');
+                delGenre($id);
+            } 
+
+        // GAME PRODUCT - GAME PRODUCT - GAME PRODUCT //
+            
+        } elseif($_GET['action'] == 'game') {
+            require('../controllers/game.php');
+            crudGame();
+
+        } elseif($_GET['action'] == 'addGame') {
+            require('../controllers/addGame.php');
+            createGame($msg);
+
+        } elseif($_GET['action'] == 'updGame') {
+            if(isset($_GET['id'])) {
+                require('../controllers/updGame.php');
+                updGame();
+            }
+
+        } elseif($_GET['action'] == 'delGame') {
+            if(isset($_GET['id'])) {
+                $id = intval($_GET['id']);
+                require('../controllers/delGame.php');
+                delGame($id);
+            } 
+            
+        }  elseif($_GET['action'] == 'logout') {
+            require('../models/logoutAdmin.php');
+
         } else {
             require('../controllers/homepage.php');
             homepageAdmin();
-
         }
 
     } else {

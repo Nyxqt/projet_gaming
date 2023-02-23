@@ -1,17 +1,5 @@
 <?php
 
-function deleteGenre() {
-    if(isset($_GET['id'])) {
-        $genreId= $_GET['id'];
-        $reqDelete= 'DELETE FROM `genre` WHERE id = :id';
-        $genreDelete= dbConnect()->prepare($reqDelete);
-        $genreDelete-> bindValue(':id', $genreId, PDO::PARAM_INT);
-        $genreDelete-> execute();
-    }
-}
-
-
-
 function getGenres() {
     // PAGINATION SYSTEM
     $db = dbConnect();
@@ -42,14 +30,14 @@ function getGenres() {
 
     // SQL REQUEST ADMIN LIST
 
-    $statement = $db->query("SELECT * FROM genre ORDER BY id LIMIT $offset, $per_page");
+    $statement = $db->query("SELECT g.id as gId, g.name as gName, g.enabled as gEnabled, c.name as cName  FROM genre g INNER JOIN category c ON c.id = g.id_category ORDER BY g.id LIMIT $offset, $per_page");
     $genres = [];
     while (($row = $statement->fetch())) {
         $genre = [
-            'id' => $row['id'],
-            'name' => $row['name'],
-            'enabled' => $row['enabled'],
-            'id_category' => $row['id_category']
+            'g.id' => $row['gId'],
+            'g.name' => $row['gName'],
+            'g.enabled' => $row['gEnabled'],
+            'c.name' => $row['cName'],
             ];
         $genres[] = $genre;
     }
@@ -57,11 +45,3 @@ function getGenres() {
     return [$genres, $next, $previous, $page, $end, $num_pages, $start];
 }
 
-function selectCategory($catId) {
-    $db = dbConnect();
-    $total_query = "SELECT name FROM category WHERE id = ".$catId["id_category"];
-    $genreStmt = $db->prepare($total_query);
-    $genreStmt-> execute();
-    $nameCat = $genreStmt->fetch();
-    return $nameCat["name"];
-}

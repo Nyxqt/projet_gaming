@@ -1,15 +1,5 @@
 <?php
 
-function deleteAdmin() {
-    if(isset($_GET['id'])) {
-        $adminId= $_GET['id'];
-        $reqDelete= 'DELETE FROM `admin` WHERE id = :id';
-        $adminDelete= dbConnect()->prepare($reqDelete);
-        $adminDelete-> bindValue(':id', $adminId, PDO::PARAM_INT);
-        $adminDelete-> execute();
-    }
-}
-
 function getAdmins() {
     // PAGINATION SYSTEM
     $db = dbConnect();

@@ -36,7 +36,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link  hover_yellow">
+        <a href="index.php?action=game&p=1" class="nav-link  hover_yellow">
         <i class="fa-solid fa-chevron-right"></i>
           Jeux
         </a>

@@ -1,15 +1,5 @@
 <?php
 
-function deleteCategory() {
-    if(isset($_GET['id'])) {
-        $categoryId= $_GET['id'];
-        $reqDelete= 'DELETE FROM `category` WHERE id = :id';
-        $categoryDelete= dbConnect()->prepare($reqDelete);
-        $categoryDelete-> bindValue(':id', $categoryId, PDO::PARAM_INT);
-        $categoryDelete-> execute();
-    }
-}
-
 function getCategories() {
     // PAGINATION SYSTEM
     $db = dbConnect();

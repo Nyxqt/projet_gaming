@@ -4,7 +4,6 @@ require_once('../models/admin.php');
 require_once('../models/model.php');
 
 function crudAdmin() {
-    deleteAdmin();
     $admins= getAdmins();
     $ad= $admins[0];
     $previous= $admins[1];

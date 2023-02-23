@@ -4,7 +4,6 @@ require_once('../models/category.php');
 require_once('../models/model.php');
 
 function crudCategory() {
-    deleteCategory();
     $categories= getCategories();
     $cat= $categories[0];
     $previous= $categories[1];

@@ -30,7 +30,7 @@
                                     echo "Désactivé";}?></td>
                     <td><a class="btn btn-warning" href="index.php?action=updCategory&id=<?=$category['id']?>" role="button">
                     <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></i></a>
-                    <a class="btn btn-danger" href="index.php?action=category&id=<?=$category['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
+                    <a class="btn btn-danger" href="index.php?action=delCategory&id=<?=$category['id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
                     <span>Effacer</span><i class="fa-solid fa-triangle-exclamation ms-2"></i></a></td>
                 </tr>
             <?php } ?>
@@ -48,7 +48,7 @@
                     <a class="page-link" href="index.php?action=category&p=<?=$previous?>" tabindex="-1" aria-disabled="true">Précédent</a>
                     </li>
                 <?php for ($i = $start; $i <= $end; $i++) { ?>
-                    <li class="page-item <?= ($page == $i) ? 'active" aria-current="page"' : '"'?>><a class="page-link" href="index.php?/=category&p=<?=$i; ?>"><?=$i;?></a></li>
+                    <li class="page-item <?= ($page == $i) ? 'active" aria-current="page"' : '"'?>><a class="page-link" href="index.php?=category&p=<?=$i; ?>"><?=$i;?></a></li>
                 <?php } ?>
                 <li class="page-item <?php if ($page == $num_pages) { echo 'disabled'; } ?>">
                     <a class="page-link" href="index.php?action=category&p=<?=$next?>">Suivant</a>
