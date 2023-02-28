@@ -10,7 +10,7 @@ if (isset($_SESSION['username'])) {
           
         } elseif($_GET['action'] == 'admin') {
             require('../controllers/admin.php');
-            crudAdmin();
+            getAdminList();
 
         } elseif($_GET['action'] == 'addAdmin') {
             require('../controllers/addAdmin.php');
@@ -33,7 +33,7 @@ if (isset($_SESSION['username'])) {
 
         } elseif($_GET['action'] == 'category') {
             require('../controllers/category.php');
-            crudCategory();
+            getCategoryList();
 
         } elseif($_GET['action'] == 'addCategory') {
             require('../controllers/addCategory.php');
@@ -56,7 +56,7 @@ if (isset($_SESSION['username'])) {
 
         } elseif($_GET['action'] == 'genre') {
             require('../controllers/genre.php');
-            crudGenre();
+            getGenreList();
 
         } elseif($_GET['action'] == 'addGenre') {
             require('../controllers/addGenre.php');
@@ -79,7 +79,7 @@ if (isset($_SESSION['username'])) {
             
         } elseif($_GET['action'] == 'game') {
             require('../controllers/game.php');
-            crudGame();
+            getGameList();
 
         } elseif($_GET['action'] == 'addGame') {
             require('../controllers/addGame.php');

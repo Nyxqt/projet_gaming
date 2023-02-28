@@ -3,7 +3,7 @@ require_once('../models/dbConnect.php');
 require_once('../models/category.php');
 require_once('../models/model.php');
 
-function crudCategory() {
+function getCategoryList() {
     $categories= getCategories();
     $cat= $categories[0];
     $previous= $categories[1];

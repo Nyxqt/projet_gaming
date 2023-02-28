@@ -5,6 +5,6 @@ require_once('../models/model.php');
 
 function createGenre($p) {
     $msg= $p;
-    $genres= selectCategory();
+    $categories= getCategories();
     require('../templates/addGenre.php');
 }

@@ -6,7 +6,7 @@
 <div class="container-fluid text-center">
     <div class="row">
         <div class="d-flex mt-3">
-            <a class="btn btn-primary" href="index.php?action=addGenre" role="button">
+            <a class="btn btn-primary" href="index.php?action=addGame" role="button">
             <i class="fa-solid fa-plus"></i>
             <span class="ms-2">Ajouter</span></a>
         </div>
@@ -34,7 +34,7 @@
                     <td><?php if ($game['g.price'] == 0) {
                                     echo "Free to play";
                                 } else {
-                                    echo number_format($game['g.price'], 2, '. ', '' );}?></td>
+                                    echo number_format($game['g.price'], 2, '. ', '' ).'€';}?></td>
                     <td><a class="btn btn-warning" href="index.php?action=updGame&id=<?=$game['g.id']?>" role="button">
                     <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></i></a>
                     <a class="btn btn-danger" href="index.php?action=delGame&id=<?=$game['g.id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">

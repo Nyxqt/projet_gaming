@@ -1,13 +1,13 @@
 <?php
 $msg='';
 
-function selectCategory() {
+function getCategories() {
     $db = dbConnect();
     $total_query = "SELECT * FROM category";
-    $genreStmt = $db->prepare($total_query);
-    $genreStmt-> execute();
-    $genres = $genreStmt->fetchAll();
-    return $genres;
+    $categoryStmt = $db->prepare($total_query);
+    $categoryStmt-> execute();
+    $categories = $categoryStmt->fetchAll();
+    return $categories;
 }
 
 if(isset($_POST['submit'])){

@@ -3,7 +3,7 @@ require_once('../models/dbConnect.php');
 require_once('../models/genre.php');
 require_once('../models/model.php');
 
-function crudGenre() {
+function getGenreList() {
     $getGenres= getGenres();
     $genres= $getGenres[0];
     $previous= $getGenres[1];

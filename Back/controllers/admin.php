@@ -3,7 +3,7 @@ require_once('../models/dbConnect.php');
 require_once('../models/admin.php');
 require_once('../models/model.php');
 
-function crudAdmin() {
+function getAdminList() {
     $admins= getAdmins();
     $ad= $admins[0];
     $previous= $admins[1];

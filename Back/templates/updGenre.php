@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-floating mt-2">
                         <input type="hidden" name="upd" value="1" />
-                        <input class="btn btn-primary" type="submit" value="Modifier le compte" />
+                        <input class="btn btn-primary" type="submit" value="Modifier le genre" />
                     </div>
                 </form>
             </div>

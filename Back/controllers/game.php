@@ -3,7 +3,7 @@ require_once('../models/dbConnect.php');
 require_once('../models/game.php');
 require_once('../models/model.php');
 
-function crudGame() {
+function getGameList() {
     $getGames= getGames();
     $games= $getGames[0];
     $previous= $getGames[1];
