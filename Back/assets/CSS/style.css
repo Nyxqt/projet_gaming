@@ -63,3 +63,7 @@ body {
 .price::before {
     content: '€';
 }
+
+.picBackOffice {
+    width: 250px;
+}

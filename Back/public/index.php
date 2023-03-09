@@ -96,9 +96,33 @@ if (isset($_SESSION['username'])) {
                 $id = intval($_GET['id']);
                 require('../controllers/delGame.php');
                 delGame($id);
+            }
+
+        // PICTURE - PICTURE - PICTURE //
+            
+        }    elseif($_GET['action'] == 'picture') {
+            require('../controllers/picture.php');
+            getPictureList();
+
+        } elseif($_GET['action'] == 'addPicture') {
+            require('../controllers/addPicture.php');
+            addPicture($msg);
+
+        } elseif($_GET['action'] == 'updPicture') {
+            if(isset($_GET['id'])) {
+                require('../controllers/updPicture.php');
+                updPicture();
+            }
+
+        } elseif($_GET['action'] == 'delPicture') {
+            if(isset($_GET['id'])) {
+                $id = intval($_GET['id']);
+                require('../controllers/delPicture.php');
+                delPicture($id);
             } 
             
-        }  elseif($_GET['action'] == 'logout') {
+        }
+          elseif($_GET['action'] == 'logout') {
             require('../models/logoutAdmin.php');
 
         } else {

@@ -3,7 +3,7 @@
 
 <div class="container-fluid mt-5">
     <h3><?=$msg?></h3>
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
         <div class="col"></div>
         <div class="col">

@@ -42,7 +42,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link  hover_yellow">
+        <a href="index.php?action=picture&p=1" class="nav-link  hover_yellow">
         <i class="fa-solid fa-image"></i>
           Images
         </a>

@@ -31,7 +31,7 @@
                                     echo "Désactivé";}?></td>
                     <td><?=$genre['c.name']?></td>
                     <td><a class="btn btn-warning" href="index.php?action=updGenre&id=<?=$genre['g.id']?>" role="button">
-                    <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></i></a>
+                    <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></a>
                     <a class="btn btn-danger" href="index.php?action=delGenre&id=<?=$genre['g.id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
                     <span>Effacer</span><i class="fa-solid fa-triangle-exclamation ms-2"></i></a></td>
                 </tr>

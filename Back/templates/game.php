@@ -36,7 +36,7 @@
                                 } else {
                                     echo number_format($game['g.price'], 2, '. ', '' ).'€';}?></td>
                     <td><a class="btn btn-warning" href="index.php?action=updGame&id=<?=$game['g.id']?>" role="button">
-                    <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></i></a>
+                    <span>Modifier</span><i class="fa-solid fa-gear ms-2"></i></a>
                     <a class="btn btn-danger" href="index.php?action=delGame&id=<?=$game['g.id']?>" onclick="return(confirm('Voulez-vous supprimer cette entrée ?'));" role="button">
                     <span>Effacer</span><i class="fa-solid fa-triangle-exclamation ms-2"></i></a></td>
                 </tr>
